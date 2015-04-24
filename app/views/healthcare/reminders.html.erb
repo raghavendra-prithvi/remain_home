@@ -1,0 +1,10 @@
+<div style="margin-top:80px;">
+<h1>Reminders</h1>
+  <h3>Medication:</h3>
+  <% @ms.each do |m| %>
+      <h5>You have to take <%=m.product_name %> - <%=m.rate_quantity%> times a day.
+        You are left with <%=(m.rate_quantity.to_i*@hour)/24  %></h5>
+  <% end %>
+
+  <h3>Consultations</h3>
+

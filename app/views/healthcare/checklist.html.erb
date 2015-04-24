@@ -1,0 +1,45 @@
+
+<!-- ======================================================================================================================== -->	
+<div id="mainBody" class="container">
+		<h3>Checklists </h3>
+		<div class="row-fluid">
+		<div id="myCarousel1" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+		  <ul class="thumbnails">
+        <% @check_lists.each do |c| %>
+			<li class="row" style="outline: 1px solid orange;">
+			  <div class="thumbnail">
+        <div class="pul-left span1"> 
+          <i class="icon-hand-right"></i>
+           <!--  <%=image_tag "/assets/check.png", :style=> "width:50px" %></a> -->
+        </div>  
+        <div class="pull-left span3">
+				<a  href="product_details.html">
+          <%=image_tag "/assets/pic-#{c.id}.jpg", :style=> "width:150px" %></a>
+          </div>
+        <div class="pull-right span8">  
+          <div class="caption">
+            <h5><%= c.name %></h5>
+            <p> 
+            <%=c.description %>
+            </p>
+            <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">check it</span></h4>
+          </div>
+          </div>  
+        
+			  </div>
+			</li>
+        <% end %>			
+		  </ul>
+		  </div>
+		   
+		</div>
+	</div>
+	</div>
+<!-- Footer ------------------------------------------------------ -->
+<hr class="soft">
+<div  id="footerSection">
+  </div>
+  <hr class="soft">
+</div><!-- /container -->

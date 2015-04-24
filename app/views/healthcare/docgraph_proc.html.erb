@@ -1,0 +1,14 @@
+<div style="margin-top:100px">
+<!--<form action="/healthcare/import_docgraph_proc" multipart=true method="POST">
+  <input type="file" name="proc" />
+  
+  <input type="submit">
+
+</form> -->
+  
+  
+ <%= form_tag("/healthcare/import_docgraph_proc", multipart: true) do %>
+  <%= file_field_tag 'proc' %>
+  <%= submit_tag %>
+<% end %> 
+</div>

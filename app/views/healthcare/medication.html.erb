@@ -1,0 +1,57 @@
+<div style="margin-top:80px;">
+</div>  
+<table class="table"> 
+  <thead>
+    <th>
+      Name
+    </th>
+    <th>
+      Prescriber
+    </th>
+    <th>
+      Reason
+    </th>
+    <th>
+      Start Time
+    </th>
+    <th>
+      End Time
+    </th>
+    <th>
+      Dose
+    </th>
+    <th>
+      Rate
+    </th>
+  </thead>
+  <tbody>
+    
+    
+<% @medication.each do |m| %>
+    <tr>
+      <td>
+        <%=m.product_name %>
+      </td>
+      <td>
+        <%=m.prescriber %>
+      </td>
+      <td>
+        <%=m.reason %>
+      </td>
+      <td>
+        <%=m.start_time %>
+      </td>
+      <td>
+        <%=m.end_time %>
+      </td>
+      <td>
+        <%=m.dose_quantity %>
+      </td>
+      <td>
+        <%=m.rate_quantity %>
+      </td>
+    </tr>
+    
+ <% end %>   
+  </tbody>
+</table>
